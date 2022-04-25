@@ -13,126 +13,119 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import fonts from "../styles/fonts.module.css";
-import { Outlet } from "react-router-dom";
 
 export default function Work() {
   return (
-    <div>
-      <Container>
-        <Row style={{ marginBottom: 35, marginTop: 20 }}>
-          <h3 className={fonts.poppinssemibold}>work.</h3>
-          <h3 className={fonts.poppinssemibold} style={{ fontSize: 16 }}>
-            incoming: mobile swe @ metlife, cloud platform engineer @ intel
-          </h3>
-        </Row>
-        <Row>
-          <Col>
-            <a
-              href="CapitalOne"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <JobCard
-                company={workInfo.SWECAPITALONE.company}
-                jobTitle={workInfo.SWECAPITALONE.jobTitle}
-                date={workInfo.SWECAPITALONE.date}
-                description={workInfo.SWECAPITALONE.description}
-                imgsrc={capitalOne}
-              />
-            </a>
-          </Col>
-          <Col>
-            <a href="UIUC" style={{ textDecoration: "none", color: "black" }}>
-              <JobCard
-                company={workInfo.UOFIPM.company}
-                jobTitle={workInfo.UOFIPM.jobTitle}
-                date={workInfo.UOFIPM.date}
-                description={workInfo.UOFIPM.description}
-                imgsrc={uofi}
-              />
-            </a>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <a href="AbbVie" style={{ textDecoration: "none", color: "black" }}>
-              <JobCard
-                company={workInfo.ABBVIESDE.company}
-                jobTitle={workInfo.ABBVIESDE.jobTitle}
-                date={workInfo.ABBVIESDE.date}
-                description={workInfo.ABBVIESDE.description}
-                imgsrc={abbvie}
-              />
-            </a>
-          </Col>
-          <Col>
-            <a href="Cisco" style={{ textDecoration: "none", color: "black" }}>
-              <JobCard
-                company={workInfo.CISCOPM.company}
-                jobTitle={workInfo.CISCOPM.jobTitle}
-                date={workInfo.CISCOPM.date}
-                description={workInfo.CISCOPM.description}
-                imgsrc={cisco}
-              />
-            </a>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <a
-              href="TheCodingSchool"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <JobCard
-                company={workInfo.TCSCI.company}
-                jobTitle={workInfo.TCSCI.jobTitle}
-                date={workInfo.TCSCI.date}
-                description={workInfo.TCSCI.description}
-                imgsrc={tcs}
-              />
-            </a>
-          </Col>
-          <Col>
-            <a
-              href="Stanford"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <JobCard
-                company={workInfo.STANFORDPYTHON.company}
-                jobTitle={workInfo.STANFORDPYTHON.jobTitle}
-                date={workInfo.STANFORDPYTHON.date}
-                description={workInfo.STANFORDPYTHON.description}
-                imgsrc={stanford}
-              />
-            </a>
-          </Col>
-        </Row>
+    <Container>
+      <Row style={{ marginBottom: 35, marginTop: 20 }}>
+        <h3 className={fonts.poppinssemibold}>work.</h3>
+        <h3 className={fonts.poppinssemibold} style={{ fontSize: 16 }}>
+          incoming: mobile swe @ metlife, cloud platform engineer @ intel
+        </h3>
+      </Row>
+      <Row>
+        <Col>
+          <a
+            href="CapitalOne"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <JobCard
+              company={workInfo.SWECAPITALONE.company}
+              jobTitle={workInfo.SWECAPITALONE.jobTitle}
+              date={workInfo.SWECAPITALONE.date}
+              description={workInfo.SWECAPITALONE.description}
+              imgsrc={capitalOne}
+            />
+          </a>
+        </Col>
+        <Col>
+          <a href="UIUC" style={{ textDecoration: "none", color: "black" }}>
+            <JobCard
+              company={workInfo.UOFIPM.company}
+              jobTitle={workInfo.UOFIPM.jobTitle}
+              date={workInfo.UOFIPM.date}
+              description={workInfo.UOFIPM.description}
+              imgsrc={uofi}
+            />
+          </a>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <a href="AbbVie" style={{ textDecoration: "none", color: "black" }}>
+            <JobCard
+              company={workInfo.ABBVIESDE.company}
+              jobTitle={workInfo.ABBVIESDE.jobTitle}
+              date={workInfo.ABBVIESDE.date}
+              description={workInfo.ABBVIESDE.description}
+              imgsrc={abbvie}
+            />
+          </a>
+        </Col>
+        <Col>
+          <a href="Cisco" style={{ textDecoration: "none", color: "black" }}>
+            <JobCard
+              company={workInfo.CISCOPM.company}
+              jobTitle={workInfo.CISCOPM.jobTitle}
+              date={workInfo.CISCOPM.date}
+              description={workInfo.CISCOPM.description}
+              imgsrc={cisco}
+            />
+          </a>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <a
+            href="TheCodingSchool"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <JobCard
+              company={workInfo.TCSCI.company}
+              jobTitle={workInfo.TCSCI.jobTitle}
+              date={workInfo.TCSCI.date}
+              description={workInfo.TCSCI.description}
+              imgsrc={tcs}
+            />
+          </a>
+        </Col>
+        <Col>
+          <a href="Stanford" style={{ textDecoration: "none", color: "black" }}>
+            <JobCard
+              company={workInfo.STANFORDPYTHON.company}
+              jobTitle={workInfo.STANFORDPYTHON.jobTitle}
+              date={workInfo.STANFORDPYTHON.date}
+              description={workInfo.STANFORDPYTHON.description}
+              imgsrc={stanford}
+            />
+          </a>
+        </Col>
+      </Row>
 
-        <Row style={{ marginBottom: 35, marginTop: 20 }}>
-          <h3 className={fonts.poppinssemibold}>other experience.</h3>
-        </Row>
-        <Row>
-          <Col>
-            <JobCard
-              company={workInfo.RDSWE.company}
-              jobTitle={workInfo.RDSWE.jobTitle}
-              date={workInfo.RDSWE.date}
-              description={workInfo.RDSWE.description}
-              imgsrc={founders}
-            />
-          </Col>
-          <Col>
-            <JobCard
-              company={workInfo.TTC.company}
-              jobTitle={workInfo.TTC.jobTitle}
-              date={workInfo.TTC.date}
-              description={workInfo.TTC.description}
-              imgsrc={ttc}
-            />
-          </Col>
-        </Row>
-      </Container>
-      <Outlet />
-    </div>
+      <Row style={{ marginBottom: 35, marginTop: 20 }}>
+        <h3 className={fonts.poppinssemibold}>other experience.</h3>
+      </Row>
+      <Row>
+        <Col>
+          <JobCard
+            company={workInfo.RDSWE.company}
+            jobTitle={workInfo.RDSWE.jobTitle}
+            date={workInfo.RDSWE.date}
+            description={workInfo.RDSWE.description}
+            imgsrc={founders}
+          />
+        </Col>
+        <Col>
+          <JobCard
+            company={workInfo.TTC.company}
+            jobTitle={workInfo.TTC.jobTitle}
+            date={workInfo.TTC.date}
+            description={workInfo.TTC.description}
+            imgsrc={ttc}
+          />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
