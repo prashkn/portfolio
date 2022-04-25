@@ -46,7 +46,7 @@ export default function Home() {
           <motion.button
             style={styles.motionbtn}
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.95 }}
           >
             <Link to="/Contact">
               <Button
