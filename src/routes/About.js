@@ -7,9 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function About() {
   return (
     <Container>
-      <Col>
-        <Row>hi</Row>
-      </Col>
+      <Row>
+        <Col>hi</Col>
+      </Row>
     </Container>
   );
 }
