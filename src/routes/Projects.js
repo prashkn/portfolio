@@ -12,22 +12,14 @@ export default function Projects() {
       <Row style={{ marginBottom: 50, marginTop: 20 }}>
         <h3 className={fonts.poppinssemibold}>what have i work on?</h3>
       </Row>
-      <motion.div animate={{ x: 50 }} transition={{ delay: 0 }}>
+      <motion.div animate={{ x: 20 }} transition={{ delay: 0 }}>
         <Row>
           <ProjectCard
             header={projects.HANDML.header}
             description={projects.HANDML.description}
             sourcecode={projects.HANDML.sourcecode}
             githublink={projects.HANDML.githublink}
-          />
-        </Row>
-
-        <Row style={{ marginTop: 30 }}>
-          <ProjectCard
-            header={projects.TTCWEB.header}
-            description={projects.TTCWEB.description}
-            sourcecode={projects.TTCWEB.sourcecode}
-            githublink={projects.TTCWEB.githublink}
+            language={projects.HANDML.language}
           />
         </Row>
         <Row style={{ marginTop: 30 }}>
@@ -36,6 +28,16 @@ export default function Projects() {
             description={projects.MENTALLYS.description}
             sourcecode={projects.MENTALLYS.sourcecode}
             githublink={projects.MENTALLYS.githublink}
+            language={projects.MENTALLYS.language}
+          />
+        </Row>
+        <Row style={{ marginTop: 30 }}>
+          <ProjectCard
+            header={projects.WORDLE.header}
+            description={projects.WORDLE.description}
+            sourcecode={projects.WORDLE.sourcecode}
+            githublink={projects.WORDLE.githublink}
+            language={projects.WORDLE.language}
           />
         </Row>
         <Row style={{ marginTop: 30 }}>
@@ -44,6 +46,25 @@ export default function Projects() {
             description={projects.DISCORDBOT.description}
             sourcecode={projects.DISCORDBOT.sourcecode}
             githublink={projects.DISCORDBOT.githublink}
+            language={projects.DISCORDBOT.language}
+          />
+        </Row>
+        <Row style={{ marginTop: 30 }}>
+          <ProjectCard
+            header={projects.HOUSEPARTY.header}
+            description={projects.HOUSEPARTY.description}
+            sourcecode={projects.HOUSEPARTY.sourcecode}
+            githublink={projects.HOUSEPARTY.githublink}
+            language={projects.HOUSEPARTY.language}
+          />
+        </Row>
+        <Row style={{ marginTop: 30 }}>
+          <ProjectCard
+            header={projects.TTCWEB.header}
+            description={projects.TTCWEB.description}
+            sourcecode={projects.TTCWEB.sourcecode}
+            githublink={projects.TTCWEB.githublink}
+            language={projects.TTCWEB.language}
           />
         </Row>
       </motion.div>
@@ -60,13 +81,14 @@ const projects = {
     description:
       "used an SGD optimization with a 0.03 learning rate and 6000 training data to take drawing of numbers and predicts the number drawn. acheived a 92.74% accuracy rate.",
     githublink: "https://github.com/prashkn/handwriting-classifier",
-    sourcecode: `trainset = datasets.MNIST('MNIST_data/', download=True, train=True, transform=transform)
-valset = datasets.MNIST('MNIST_data/', download=True, train=False, transform=transform)
+    language: "python",
+    sourcecode: `def view_classify(img, ps):
+        """ Function for viewing an image and it's predicted classes."""
+        ps = ps.data.numpy().squeeze()
 
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=mini_batch_size, shuffle=True)
-valloader = torch.utils.data.DataLoader(valset, batch_size=mini_batch_size, shuffle=True)
-dataiter = iter(trainloader)
-images, labels = dataiter.next()`,
+        fig, (ax1, ax2) = plt.subplots(figsize=(6,9), ncols=2)
+        ax1.imshow(img.resize_(1, 28, 28).numpy().squeeze())
+        ax1.axis('off')`,
   },
   TTCWEB: {
     header: {
@@ -76,6 +98,7 @@ images, labels = dataiter.next()`,
     description:
       "developed a website from start to finish for the chicago chapter of Tech Together, the nation’s largest hackathon organization focused on making the hackathon space more inclusive to marginalized groups.",
     githublink: "https://github.com/TechTogetherInc/ttc-2022",
+    language: "html",
     sourcecode: `<button
   type="button action"
   class="btn btn-outline-danger action"
@@ -92,6 +115,7 @@ images, labels = dataiter.next()`,
     description:
       "created an app with a team that asks a user a series of questions, and based on their answers, determines their mood. utilized the spotify api to query a playlist and play the user a playlist through the spotify app.",
     githublink: "https://github.com/prashkn/Group-5",
+    language: "java",
     sourcecode: `String genre = AllSet.generateGenre(QuestionsStart.MoodTracker);
 Log.d("MusicBrowser", genre + ": " + AllSet.music.get(genre));
 String playlistURI = AllSet.music.get(genre);
@@ -108,12 +132,47 @@ mSpotifyAppRemote.getPlayerApi().play(playlistURI);`,
     description:
       "made a node.js application tangent to the discord api to create a bot that has 10 or so commands. used in 3 servers with about 280 users total.",
     githublink: "https://github.com/prashkn/discord-bot",
-    sourcecode: `let newWord = [];
-for (let n = 0; n < originalWord.length; n++) {
-    let tempNumber = Math.floor(Math.random()*originalArray.length);
-    newWord[n] = originalArray[tempNumber];
-    originalArray.splice(tempNumber, 1);
+    language: "javascript",
+    sourcecode: `const fs = require('fs');
+bot.commands = new Discord.Collection();
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require('./commands/' + file);
+    bot.commands.set(command.name, command);
+}`,
+  },
+  WORDLE: {
+    header: {
+      a: "web page",
+      b: "solves your daily wordle",
+    },
+    description:
+      "created an algorithm to determine a list of all viable options to choose from. created a wrapper from bootstrap to display this list of words and take in user input of their guesses.",
+    githublink: "https://github.com/prashkn/wordle_solver_cli",
+    language: "javascript",
+    sourcecode: `let validHintsArray = ["b", "y", "g"];
+let validHints = hints.length == 5;
+for (let i = 0; i < 5; i++) {
+    if (!validHintsArray.includes(hints.charAt(i))) validHints = false;
 }
-message.reply(newWord.join(''));`,
+
+return validGuess && validHints;`,
+  },
+  HOUSEPARTY: {
+    header: {
+      a: "mobile card game",
+      b: "you can play with your friends",
+    },
+    description:
+      "a react native card game for small get-togethers with your friends. create players, and randomize card prompts with random player names.",
+    githublink: "https://github.com/prashkn/house-party",
+    language: "javascript",
+    sourcecode: `question.forEach((phrase, idx) => {
+    if (idx != question.length - 1) {
+        prompted += phrase + getRandomPlayer();
+    } else {
+        prompted += phrase;
+    }
+});`,
   },
 };
