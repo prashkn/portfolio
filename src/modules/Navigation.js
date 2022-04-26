@@ -16,7 +16,6 @@ export default function Navigation() {
     console.log("Switched");
   };
   */
-
   return (
     <>
       <Nav
