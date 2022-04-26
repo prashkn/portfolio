@@ -4,12 +4,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import fonts from "../styles/fonts.module.css";
 import { motion } from "framer-motion";
+import { CodeBlock, nord } from "react-code-blocks";
 
 export default function ProjectCard({
   header,
   description,
   sourcecode,
   githublink,
+  language,
 }) {
   return (
     <motion.div
@@ -36,10 +38,13 @@ export default function ProjectCard({
                 </h2>
               </Row>
             </Col>
-            <Col>
-              <pre style={styles.pre}>
-                <code style={styles.code}>{sourcecode}</code>
-              </pre>
+            <Col xs={5}>
+              <CodeBlock
+                text={sourcecode}
+                language={language}
+                theme={nord}
+                showLineNumbers={true}
+              />
             </Col>
           </Row>
         </Container>
