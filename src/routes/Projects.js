@@ -24,13 +24,14 @@ export default function Projects() {
         </Row>
         <Row style={{ marginTop: 30 }}>
           <ProjectCard
-            header={projects.MENTALLYS.header}
-            description={projects.MENTALLYS.description}
-            sourcecode={projects.MENTALLYS.sourcecode}
-            githublink={projects.MENTALLYS.githublink}
-            language={projects.MENTALLYS.language}
+            header={projects.STARTUPDIR.header}
+            description={projects.STARTUPDIR.description}
+            sourcecode={projects.STARTUPDIR.sourcecode}
+            githublink={projects.STARTUPDIR.githublink}
+            language={projects.STARTUPDIR.language}
           />
         </Row>
+
         <Row style={{ marginTop: 30 }}>
           <ProjectCard
             header={projects.WORDLE.header}
@@ -38,6 +39,15 @@ export default function Projects() {
             sourcecode={projects.WORDLE.sourcecode}
             githublink={projects.WORDLE.githublink}
             language={projects.WORDLE.language}
+          />
+        </Row>
+        <Row style={{ marginTop: 30 }}>
+          <ProjectCard
+            header={projects.MENTALLYS.header}
+            description={projects.MENTALLYS.description}
+            sourcecode={projects.MENTALLYS.sourcecode}
+            githublink={projects.MENTALLYS.githublink}
+            language={projects.MENTALLYS.language}
           />
         </Row>
         <Row style={{ marginTop: 30 }}>
@@ -174,5 +184,22 @@ return validGuess && validHints;`,
         prompted += phrase;
     }
 });`,
+  },
+  STARTUPDIR: {
+    header: {
+      a: "web directory",
+      b: "connects startups and students",
+    },
+    description:
+      "this startup directory is a project i helped develop with founders, an uiuc club that helps entrepreneurs. it is a react application, utilizing auth0, mongoDB, and many different react libraries. startups can post their startups and jobs, and users can view job openings and filter through startups.",
+    githublink: "https://github.com/founders/startup-directory",
+    language: "jsx",
+    sourcecode: `<li>Skills: </li>
+{skills.map((skill, idx) => (
+  <li key={skill + idx}>
+    {skill}
+    {idx !== skills.length - 1 && ', '}
+  </li>
+))}`,
   },
 };
