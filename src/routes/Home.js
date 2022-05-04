@@ -27,7 +27,7 @@ export default function Home() {
         <Row>
           <Col>
             <h1 className={fonts.poppinssemibold}>
-              cs @ illinois | software engineer intern @ capital one
+              cs @ illinois | incoming mobile swe intern @ metlife
             </h1>
           </Col>
         </Row>
