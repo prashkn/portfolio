@@ -42,8 +42,8 @@ export default function Home() {
         </Row>
       </motion.div>
       <Row style={styles.buttonplacement}>
-        <Col>
-          <motion.button
+        <Col xs={3} style={{ display: "flex", justifyContent: "center" }}>
+          <motion.div
             style={styles.motionbtn}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -59,7 +59,7 @@ export default function Home() {
                 reach out
               </Button>
             </Link>
-          </motion.button>
+          </motion.div>
         </Col>
       </Row>
     </Container>
@@ -76,6 +76,7 @@ const styles = {
   },
   motiondiv: {
     cursor: "pointer",
+    marginLeft: "3%",
   },
   prashantnheader: {
     marginTop: "15%",
