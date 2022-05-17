@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <Container>
+    <Container style={{ marginBottom: 30 }}>
       <Row style={{ marginBottom: 50, marginTop: 20 }}>
         <h3 className={fonts.poppinssemibold}>what have i work on?</h3>
       </Row>
@@ -70,11 +70,29 @@ export default function Projects() {
         </Row>
         <Row style={{ marginTop: 30 }}>
           <ProjectCard
+            header={projects.POKEMONAPI.header}
+            description={projects.POKEMONAPI.description}
+            sourcecode={projects.POKEMONAPI.sourcecode}
+            githublink={projects.POKEMONAPI.githublink}
+            language={projects.POKEMONAPI.language}
+          />
+        </Row>
+        <Row style={{ marginTop: 30 }}>
+          <ProjectCard
             header={projects.TTCWEB.header}
             description={projects.TTCWEB.description}
             sourcecode={projects.TTCWEB.sourcecode}
             githublink={projects.TTCWEB.githublink}
             language={projects.TTCWEB.language}
+          />
+        </Row>
+        <Row style={{ marginTop: 30 }}>
+          <ProjectCard
+            header={projects.PORTFOLIO.header}
+            description={projects.PORTFOLIO.description}
+            sourcecode={projects.PORTFOLIO.sourcecode}
+            githublink={projects.PORTFOLIO.githublink}
+            language={projects.PORTFOLIO.language}
           />
         </Row>
       </motion.div>
@@ -201,5 +219,38 @@ return validGuess && validHints;`,
     {idx !== skills.length - 1 && ', '}
   </li>
 ))}`,
+  },
+  POKEMONAPI: {
+    header: {
+      a: "pokemon cli game",
+      b: "lets you battle against a pokemon",
+    },
+    description:
+      "a cli game that lets you choose any pokemon and their respective moves. pulls data from the pokeapi, and utilizes data persistance to save the amount of calls made. randomizes enemy pokemon, and their moves.",
+    githublink: "https://github.com/prashkn/pokemon_analysis",
+    language: "python",
+    sourcecode: `def get_move_data(move_names):
+  move_data = {}
+  for move_name in move_names:
+      move = make_call("move", move_name)
+      move_data[move_name] = move
+
+  return move_data`,
+  },
+  PORTFOLIO: {
+    header: {
+      a: "portfolio",
+      b: "showcases me",
+    },
+    description: "what you're looking at! built using react 👍",
+    githublink: "https://github.com/prashkn/portfolio",
+    language: "jsx",
+    sourcecode: `<ProjectCard
+  header={projects.PORTFOLIO.header}
+  description={projects.PORTFOLIO.description}
+  sourcecode={projects.PORTFOLIO.sourcecode}
+  githublink={projects.PORTFOLIO.githublink}
+  language={projects.PORTFOLIO.language}
+/>`,
   },
 };

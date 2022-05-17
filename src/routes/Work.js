@@ -16,7 +16,7 @@ import fonts from "../styles/fonts.module.css";
 
 export default function Work() {
   return (
-    <Container>
+    <Container style={{ marginBottom: 30 }}>
       <Row style={{ marginBottom: 35, marginTop: 20 }}>
         <h3 className={fonts.poppinssemibold}>work.</h3>
         <h3 className={fonts.poppinssemibold} style={{ fontSize: 16 }}>

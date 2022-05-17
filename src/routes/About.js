@@ -15,7 +15,7 @@ import { Checkbox } from "@mui/material";
 
 export default function About() {
   return (
-    <Container>
+    <Container style={{ marginBottom: 30 }}>
       <Row style={{ marginBottom: 50, marginTop: 20 }}>
         <h3 className={fonts.poppinssemibold}>who am i?</h3>
       </Row>
@@ -56,7 +56,7 @@ export default function About() {
             <span style={{ color: "#AC5AFE" }}>
               sophomore at the university of illinois studying computer science
             </span>
-            . i'm was a{" "}
+            . i was a{" "}
             <span style={{ color: "#AC5AFE" }}>
               software engineering intern at capital one
             </span>
@@ -81,19 +81,40 @@ export default function About() {
       </motion.div>
       <motion.div animate={{ x: 40 }} transition={{ delay: 0 }}>
         <Row style={{ marginTop: 50 }}>
-          <Col>
-            <h4 className={fonts.poppinssemibold}>my to-do list</h4>
-          </Col>
-        </Row>
-        <Row>
           <Col lg={4}>
-            {todo.map((bulletpoint) => (
-              <FormControlLabel
-                control={<Checkbox defaultChecked={false} />}
-                label={bulletpoint}
-              />
-            ))}
+            <Row>
+              <Col>
+                <h4 className={fonts.poppinssemibold}>my to-do list</h4>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                {todo.map((bulletpoint) => (
+                  <FormControlLabel
+                    control={<Checkbox defaultChecked={false} />}
+                    label={bulletpoint}
+                  />
+                ))}
+              </Col>
+            </Row>
           </Col>
+          {/*
+          <Col>
+            <h4 className={fonts.poppinssemibold}>A bit more about me</h4>
+            <Row>
+              <img
+                style={{ marginLeft: 10, marginRight: 10 }}
+                src={plant}
+                alt="img"
+              />
+              <img
+                style={{ marginLeft: 10, marginRight: 10 }}
+                src={vg}
+                alt="img"
+              />
+            </Row>
+          </Col>
+          */}
         </Row>
       </motion.div>
     </Container>

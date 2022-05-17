@@ -6,7 +6,7 @@ import fonts from "../styles/fonts.module.css";
 
 export default function CapitalOne() {
   return (
-    <Container>
+    <Container style={{ marginBottom: 30 }}>
       <Row style={{ marginBottom: 35, marginTop: 20 }}>
         <Col>
           <h3 className={fonts.poppinssemibold}>{info.companyheader}</h3>
