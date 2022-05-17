@@ -20,7 +20,7 @@ export default function Work() {
       <Row style={{ marginBottom: 35, marginTop: 20 }}>
         <h3 className={fonts.poppinssemibold}>work.</h3>
         <h3 className={fonts.poppinssemibold} style={{ fontSize: 16 }}>
-          incoming: mobile swe @ metlife, cloud platform engineer @ intel
+          incoming: mobile swe @ metlife
         </h3>
       </Row>
       <Row>
