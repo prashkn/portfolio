@@ -7,89 +7,167 @@ import Nav from "react-bootstrap/Nav";
 import fonts from "../styles/fonts.module.css";
 import { Link, Outlet } from "react-router-dom";
 import { Navbar, Container } from "react-bootstrap";
+import "../styles/Navigation.css";
 
 export default function Navigation() {
   return (
-    <Navbar collapseOnSelect expand="lg">
-      <Container>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav
-            className="justify-content-end me-auto"
-            activeKey="/home"
-            style={{ marginTop: 10, marginRight: 20 }}
-          >
-            <Nav.Item>
-              <Nav.Link>
-                <Link
-                  to="/"
-                  className={fonts.poppinssemibold}
-                  style={styles.navText}
-                >
-                  home
-                </Link>
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link>
-                <Link
-                  className={fonts.poppinssemibold}
-                  style={styles.navText}
-                  eventKey="link-1"
-                  to="/About"
-                >
-                  about
-                </Link>
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link>
-                <Link
-                  className={fonts.poppinssemibold}
-                  style={styles.navText}
-                  eventKey="link-2"
-                  to="/Work"
-                >
-                  work
-                </Link>
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link>
-                <Link
-                  className={fonts.poppinssemibold}
-                  style={styles.navText}
-                  eventKey="link-4"
-                  to="/Projects"
-                >
-                  projects
-                </Link>
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link>
-                <Link
-                  className={fonts.poppinssemibold}
-                  style={styles.navText}
-                  eventKey="link-3"
-                  to="/Contact"
-                >
-                  contact
-                </Link>
-              </Nav.Link>
-            </Nav.Item>
-            {/* 
+    <>
+      <Container className="responsivecheat">
+        <Navbar collapseOnSelect expand="md">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav
+              className="justify-content-end me-auto"
+              activeKey="/home"
+              style={{ marginTop: 10, marginRight: 20 }}
+            >
+              <Nav.Item>
+                <Nav.Link>
+                  <Link
+                    to="/"
+                    className={fonts.poppinssemibold}
+                    style={styles.navText}
+                  >
+                    home
+                  </Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link>
+                  <Link
+                    className={fonts.poppinssemibold}
+                    style={styles.navText}
+                    eventKey="link-1"
+                    to="/About"
+                  >
+                    about
+                  </Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link>
+                  <Link
+                    className={fonts.poppinssemibold}
+                    style={styles.navText}
+                    eventKey="link-2"
+                    to="/Work"
+                  >
+                    work
+                  </Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link>
+                  <Link
+                    className={fonts.poppinssemibold}
+                    style={styles.navText}
+                    eventKey="link-4"
+                    to="/Projects"
+                  >
+                    projects
+                  </Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link>
+                  <Link
+                    className={fonts.poppinssemibold}
+                    style={styles.navText}
+                    eventKey="link-3"
+                    to="/Contact"
+                  >
+                    contact
+                  </Link>
+                </Nav.Link>
+              </Nav.Item>
+              {/* 
         <Nav.Item>
           <div className={test.switch} data-isOn={isOn} onClick={toggleSwitch}>
             <motion.div className={test.handle} layout transition={spring} />
           </div>
         </Nav.Item>
         */}
-          </Nav>
-        </Navbar.Collapse>
+            </Nav>
+          </Navbar.Collapse>
+          <Outlet />
+        </Navbar>
+      </Container>
+      <Container className="responsivecheattwo">
+        <Nav
+          className="justify-content-end"
+          activeKey="/home"
+          style={{ marginTop: 10, marginRight: 20 }}
+        >
+          <Nav.Item>
+            <Nav.Link>
+              <Link
+                to="/"
+                className={fonts.poppinssemibold}
+                style={styles.navText}
+              >
+                home
+              </Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link
+                className={fonts.poppinssemibold}
+                style={styles.navText}
+                eventKey="link-1"
+                to="/About"
+              >
+                about
+              </Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link
+                className={fonts.poppinssemibold}
+                style={styles.navText}
+                eventKey="link-2"
+                to="/Work"
+              >
+                work
+              </Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link
+                className={fonts.poppinssemibold}
+                style={styles.navText}
+                eventKey="link-4"
+                to="/Projects"
+              >
+                projects
+              </Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link
+                className={fonts.poppinssemibold}
+                style={styles.navText}
+                eventKey="link-3"
+                to="/Contact"
+              >
+                contact
+              </Link>
+            </Nav.Link>
+          </Nav.Item>
+          {/*
+       <Nav.Item>
+         <div className={test.switch} data-isOn={isOn} onClick={toggleSwitch}>
+           <motion.div className={test.handle} layout transition={spring} />
+         </div>
+       </Nav.Item>
+       */}
+        </Nav>
         <Outlet />
       </Container>
-    </Navbar>
+    </>
   );
 }
 
