@@ -19,9 +19,6 @@ export default function Work() {
     <Container style={{ marginBottom: 30 }}>
       <Row style={{ marginBottom: 35, marginTop: 20 }}>
         <h3 className={fonts.poppinssemibold}>work.</h3>
-        <h3 className={fonts.poppinssemibold} style={{ fontSize: 16 }}>
-          incoming: mobile swe @ metlife
-        </h3>
       </Row>
       <Row>
         <Col sm={12} md={6}>
