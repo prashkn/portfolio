@@ -25,6 +25,8 @@
   .container {
     margin-left: 0%;
     max-height: 500px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
