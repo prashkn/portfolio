@@ -41,7 +41,7 @@ export default function Home() {
           </Col>
         </Row>
       </motion.div>
-      <div className="mobilev">
+      <div className="mobilev" style={{ textAlign: "center" }}>
         <Row style={styles.prashantnheader}>
           <Col>
             <h1 className={fonts.poppinssemibold} style={{ fontSize: "30px" }}>
@@ -56,7 +56,7 @@ export default function Home() {
             </h1>
           </Col>
         </Row>
-        <Row style={styles.caption}>
+        <Row>
           <Col>
             <h3 className={fonts.poppinsregular} style={{ fontSize: "15px" }}>
               a sophomore attending the University of Illinois, interested in
