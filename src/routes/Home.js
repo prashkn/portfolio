@@ -10,7 +10,7 @@ import "../styles/Home.css";
 
 export default function Home() {
   return (
-    <Container className="container">
+    <Container className="containerx">
       <motion.div
         drag
         dragConstraints={{ top: -50, left: -50, right: 150, bottom: 0 }}

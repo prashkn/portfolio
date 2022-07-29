@@ -17,12 +17,12 @@
   font-size: clamp(30px, 40px, 60px);
 }
 
-.container {
+.containerx {
   margin-left: 5%;
 }
 
 @media only screen and (max-width: 767px) {
-  .container {
+  .containerx {
     margin-left: 0%;
     max-height: 500px;
     max-width: 100%;
