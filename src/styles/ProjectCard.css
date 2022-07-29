@@ -1,0 +1,23 @@
+@media only screen and (max-width: 767px) {
+  .card-container {
+    margin-bottom: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .codeblock {
+    visibility: hidden;
+    max-height: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .under {
+    visibility: hidden;
+    max-height: 0;
+  }
+}

@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import fonts from "../styles/fonts.module.css";
 import { motion } from "framer-motion";
 import { CodeBlock, nord } from "react-code-blocks";
+import "../styles/ProjectCard.css";
 
 export default function ProjectCard({
   header,
@@ -25,20 +26,20 @@ export default function ProjectCard({
         target="_blank"
         rel="noreferrer"
       >
-        <Container>
+        <Container className="card-container">
           <Row>
-            <Col xs={7}>
+            <Col sm={12} md={7}>
               <h1 className={fonts.poppinssemibold} style={{ fontSize: 20 }}>
                 a <span style={{ backgroundColor: "#EDE3FC" }}>{header.a}</span>{" "}
                 that <span style={{ color: "#AC5AFE" }}>{header.b}</span>.
               </h1>
-              <Row style={{ marginRight: "28%" }}>
+              <Row style={{ marginRight: "28%" }} className="under">
                 <h2 class={fonts.poppinsmedium} style={{ fontSize: 14 }}>
                   {description}
                 </h2>
               </Row>
             </Col>
-            <Col xs={5}>
+            <Col sm={12} md={5} className="codeblock">
               <CodeBlock
                 text={sourcecode}
                 language={language}

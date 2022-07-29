@@ -71,19 +71,6 @@ export default function Contact() {
             </motion.div>
           </Col>
         </Row>
-        <Row>
-          <Col
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "3%",
-            }}
-          >
-            <h5 className={fonts.poppinsregular}>
-              don't live to work, work to live.
-            </h5>
-          </Col>
-        </Row>
       </motion.div>
     </Container>
   );

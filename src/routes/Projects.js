@@ -12,7 +12,7 @@ export default function Projects() {
       <Row style={{ marginBottom: 50, marginTop: 20 }}>
         <h3 className={fonts.poppinssemibold}>what have i work on?</h3>
       </Row>
-      <motion.div animate={{ x: 20 }} transition={{ delay: 0 }}>
+      <motion.div animate={{ x: 0 }} transition={{ delay: 0 }}>
         <Row>
           <ProjectCard
             header={projects.HANDML.header}

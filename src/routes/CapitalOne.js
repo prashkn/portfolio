@@ -18,23 +18,18 @@ export default function CapitalOne() {
           className={fonts.poppinssemibold}
           style={{ color: "#AC5AFE", marginBottom: 10 }}
         >
-          Outline
+          Coming Soon!
         </h4>
-        <h6 className={fonts.poppinsmedium}>{info.outline}</h6>
-      </Row>
-      <Row style={{ marginBottom: 35 }}>
-        <h4
-          className={fonts.poppinssemibold}
-          style={{ color: "#AC5AFE", marginBottom: 10 }}
-        >
-          Work
-        </h4>
-        <h6 className={fonts.poppinsmedium}>{info.work1}</h6>
-        <h6
-          className={fonts.poppinsmedium}
-          style={{ textDecoration: "underline" }}
-        >
-          Testing User Stories
+        <h6 className={fonts.poppinsmedium}>
+          Until then, please check my{" "}
+          <a
+            href="https://www.linkedin.com/in/prashant-n/"
+            target="_blank"
+            rel="noopener"
+          >
+            linkedin
+          </a>{" "}
+          for information on my experience at Capital One.
         </h6>
       </Row>
     </Container>
@@ -44,4 +39,6 @@ export default function CapitalOne() {
 const info = {
   companyheader: "Capital One",
   jobTitle: "Software Engineer Intern",
+  outline: "",
+  work1: "",
 };

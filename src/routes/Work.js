@@ -24,7 +24,7 @@ export default function Work() {
         </h3>
       </Row>
       <Row>
-        <Col>
+        <Col sm={12} md={6}>
           <a
             href="CapitalOne"
             style={{ textDecoration: "none", color: "black" }}
@@ -38,7 +38,7 @@ export default function Work() {
             />
           </a>
         </Col>
-        <Col>
+        <Col sm={12} md={6}>
           <a href="UIUC" style={{ textDecoration: "none", color: "black" }}>
             <JobCard
               company={workInfo.UOFIPM.company}
@@ -51,7 +51,7 @@ export default function Work() {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col sm={12} md={6}>
           <a href="AbbVie" style={{ textDecoration: "none", color: "black" }}>
             <JobCard
               company={workInfo.ABBVIESDE.company}
@@ -62,7 +62,7 @@ export default function Work() {
             />
           </a>
         </Col>
-        <Col>
+        <Col sm={12} md={6}>
           <a href="Cisco" style={{ textDecoration: "none", color: "black" }}>
             <JobCard
               company={workInfo.CISCOPM.company}
@@ -75,7 +75,7 @@ export default function Work() {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col sm={12} md={6}>
           <a
             href="TheCodingSchool"
             style={{ textDecoration: "none", color: "black" }}
@@ -89,7 +89,7 @@ export default function Work() {
             />
           </a>
         </Col>
-        <Col>
+        <Col sm={12} md={6}>
           <a href="Stanford" style={{ textDecoration: "none", color: "black" }}>
             <JobCard
               company={workInfo.STANFORDPYTHON.company}
@@ -106,7 +106,7 @@ export default function Work() {
         <h3 className={fonts.poppinssemibold}>other experience.</h3>
       </Row>
       <Row>
-        <Col>
+        <Col sm={12} md={6}>
           <JobCard
             company={workInfo.RDSWE.company}
             jobTitle={workInfo.RDSWE.jobTitle}
@@ -115,7 +115,7 @@ export default function Work() {
             imgsrc={founders}
           />
         </Col>
-        <Col>
+        <Col sm={12} md={6}>
           <JobCard
             company={workInfo.TTC.company}
             jobTitle={workInfo.TTC.jobTitle}
