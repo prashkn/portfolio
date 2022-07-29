@@ -5,9 +5,8 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import fonts from "../styles/fonts.module.css";
 import { sizes } from "../styles/sizing.js";
-import Button from "react-bootstrap/Button";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import "../styles/Home.css";
 
 export default function Home() {
   return (
@@ -16,6 +15,7 @@ export default function Home() {
         drag
         dragConstraints={{ top: -50, left: -50, right: 150, bottom: 0 }}
         style={styles.motiondiv}
+        className="motion"
       >
         <Row style={styles.prashantnheader}>
           <Col>
@@ -41,27 +41,31 @@ export default function Home() {
           </Col>
         </Row>
       </motion.div>
-      <Row style={styles.buttonplacement}>
-        <Col xs={3} style={{ display: "flex", justifyContent: "center" }}>
-          <motion.div
-            style={styles.motionbtn}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link to="/Contact">
-              <Button
-                className={fonts.poppinssemibold}
-                variant="primary"
-                size="lg"
-                active
-                style={styles.button}
-              >
-                reach out
-              </Button>
-            </Link>
-          </motion.div>
-        </Col>
-      </Row>
+      <div className="mobilev">
+        <Row style={styles.prashantnheader}>
+          <Col>
+            <h1 className={fonts.poppinssemibold} style={{ fontSize: "30px" }}>
+              prashant naganaboyina
+            </h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h1 className={fonts.poppinssemibold} style={{ fontSize: "20px" }}>
+              cs @ illinois | incoming mobile swe intern @ metlife
+            </h1>
+          </Col>
+        </Row>
+        <Row style={styles.caption}>
+          <Col>
+            <h3 className={fonts.poppinsregular} style={{ fontSize: "15px" }}>
+              a sophomore attending the University of Illinois, interested in
+              mobile app development and other client facing product
+              development.
+            </h3>
+          </Col>
+        </Row>
+      </div>
     </Container>
   );
 }
