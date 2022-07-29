@@ -10,7 +10,7 @@ import "../styles/Home.css";
 
 export default function Home() {
   return (
-    <Container style={styles.container}>
+    <Container className="container">
       <motion.div
         drag
         dragConstraints={{ top: -50, left: -50, right: 150, bottom: 0 }}
@@ -41,7 +41,10 @@ export default function Home() {
           </Col>
         </Row>
       </motion.div>
-      <div className="mobilev" style={{ textAlign: "center" }}>
+      <div
+        className="mobilev"
+        style={{ textAlign: "center", margin: "0 auto" }}
+      >
         <Row style={styles.prashantnheader}>
           <Col>
             <h1 className={fonts.poppinssemibold} style={{ fontSize: "30px" }}>
@@ -71,9 +74,6 @@ export default function Home() {
 }
 
 const styles = {
-  container: {
-    marginLeft: "5%",
-  },
   containertwo: {
     marginLeft: "5%",
     backgroundColor: "black",
