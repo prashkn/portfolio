@@ -55,7 +55,7 @@ export default function Home() {
         <Row>
           <Col>
             <h1 className={fonts.poppinssemibold} style={{ fontSize: "20px" }}>
-              cs @ illinois | incoming mobile swe intern @ metlife
+              cs @ illinois | swe intern @ metlife
             </h1>
           </Col>
         </Row>
